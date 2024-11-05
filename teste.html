@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <style>
+        .produtos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .produto {
+            width: 150px;
+            text-align: center;
+        }
+        .produto img {
+            width: 100%;
+            height: auto;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination button {
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="produtos-grid" id="produtos-grid">
+    <!-- Produtos serão gerados aqui via JavaScript -->
+</div>
+
+<div class="pagination" id="pagination">
+    <!-- Botões de paginação serão gerados aqui -->
+</div>
+
+<script>
+    // Lista dos produtos
+    const produtos = [
+        { img: "img/produtos/caixa-dagua.png", name: "Caixa D'Água" },
+        { img: "img/produtos/bombadagua.png", name: "Bomba D'Água" },
+        { img: "img/produtos/cano-pvc.png", name: "Cano PVC" },
+        { img: "img/produtos/boia.png", name: "Boia" },
+        { img: "img/produtos/caixa-dagua-tamanhos.png", name: "Caixa D'Água vários tamanhos" },
+        { img: "img/produtos/caixa-ferramentas.png", name: "Caixa de Ferramentas" },
+        { img: "img/produtos/ducha-higienica.png", name: "Ducha Higiênica" },
+        { img: "img/produtos/espuma.png", name: "Multiuso Instantâneo" },
+        { img: "img/produtos/interruptor-verde.png", name: "Interruptor" },
+        { img: "img/produtos/interruptor.png", name: "Interruptor" },
+        { img: "img/produtos/lampada.png", name: "Lâmpada" },
+        { img: "img/produtos/luminaria.png", name: "Luminária" }
+    ];
+
+    const itemsPerPage = 4; // Número de produtos por página
+    let currentPage = 1;
+
+    // Função para exibir os produtos
+    function displayProducts(page) {
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = page * itemsPerPage;
+        const productsToDisplay = produtos.slice(startIndex, endIndex);
+
+        const produtosGrid = document.getElementById('produtos-grid');
+        produtosGrid.innerHTML = '';
+
+        productsToDisplay.forEach(produto => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('produto');
+            productDiv.innerHTML = `
+                <img src="${produto.img}" alt="${produto.name}">
+                <h4>${produto.name}</h4>
+            `;
+            produtosGrid.appendChild(productDiv);
+        });
+    }
+
+    // Função para gerar os botões de paginação
+    function generatePagination() {
+        const totalPages = Math.ceil(produtos.length / itemsPerPage);
+        const paginationDiv = document.getElementById('pagination');
+        paginationDiv.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement('button');
+            button.textContent = i;
+            button.onclick = () => {
+                currentPage = i;
+                displayProducts(currentPage);
+            };
+            paginationDiv.appendChild(button);
+        }
+    }
+
+    // Inicializar a página
+    function init() {
+        displayProducts(currentPage);
+        generatePagination();
+    }
+
+    // Chama a função para inicializar
+    init();
+</script>
+
+</body>
+</html>

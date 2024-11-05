@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    width: 80%;
+    margin: 0 auto;
+    /* text-align: center; */
+
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+header {
+    background-image: linear-gradient(to bottom, #003399, #023fb8, #0551e7);
+    padding: 20px 0;
+    padding-bottom: 0;
+    color: white;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    width: 14%;
+    height: 30px;
+}
+
+nav ul li:hover {
+    background-color: #003399;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+h3 {
+    font-size: 1.8rem;
+    color: #003399;
+    margin-bottom: 20px;
+}
+
+.titulo a {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#produtos {
+    padding: 40px 0; /* Espaçamento acima e abaixo da seção */
+    background-color: #f9f9f9; /* Cor de fundo suave para a seção */
+}
+
+#produtos h3 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #003399; /* Cor do título */
+}
+
+.produtos-grid {
+    display: grid; /* Usa grid para organizar os produtos */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta automaticamente o número de colunas */
+    gap: 20px; /* Espaço entre os itens da grade */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+.produto {
+    background-color: #fff; /* Cor de fundo dos produtos */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 8px; /* Cantos arredondados */
+    overflow: hidden; /* Impede que elementos internos saiam do contêiner */
+    text-align: center; /* Centraliza o texto dentro do produto */
+    transition: transform 0.3s; /* Efeito de transição ao passar o mouse */
+}
+
+.produto:hover {
+    transform: scale(1.05); /* Aumenta um pouco o produto ao passar o mouse */
+}
+
+.produto img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-bottom: 1px solid #ddd; /* Borda abaixo da imagem */
+}
+
+.produto h4 {
+    padding: 15px; /* Espaçamento interno para o título */
+    font-size: 18px; /* Tamanho da fonte do título do produto */
+    color: #003399; /* Cor do texto */
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato img{
+    width: 30%; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+.contato ul {
+    align-items: left;
+    padding: 0;                 /* Remove o preenchimento padrão */
+    margin: 0;                  /* Remove a margem padrão */
+}
+
+.contato li {
+    margin: 5px 0;              /* Espaço entre os itens da lista */
+}
+
+.contato a {
+    text-decoration: none;       /* Remove o sublinhado dos links */
+    color: #007BFF;             /* Cor dos links, ajuste conforme necessário */
+}
+
+.contato a:hover {
+    text-decoration: underline;  /* Adiciona sublinhado ao passar o mouse */
+}
+
+footer {
+    background-color: #002266;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#ofertas {
+    width: 100%;
+}
+
+.container .oferta {
+    width: 100%;
+}
+
+.container-ofertas {
+    width: 100%;
+    overflow: hidden;
+}
+
+.ofertas-grid {
+    display: flex;
+    overflow: visible;
+    width: 100%;
+    animation: rotate 5s linear infinite;
+    margin: 10px;
+    margin-left: 0;
+    padding: 0;
+    border-radius: 4px;
+}
+
+.container-ofertas h3 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.oferta {
+    flex: 0 0 33.66%; 
+    padding: 5px;
+    /* transition: transform 0.5s ease; */
+}
+
+.oferta img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.oferta img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    border: 2px white;
+}
+
+@keyframes rotate {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Ao passar o mouse sobre a área, a rotação para */
+.ofertas-grid:hover {
+    animation-play-state: paused;
+}
+
+
+.oferta h4 {
+    margin-top: 10px;
+    color: #003399;
+}
