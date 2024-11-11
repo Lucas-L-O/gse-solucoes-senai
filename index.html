@@ -16,7 +16,7 @@
         <div class="container">
             <div class="titulo">
                 <a href="index.html">
-                    <img class="logo" src="img/identidade/gsesolucoeslogo-cortada.png" alt="logo gse Soluções">
+                    <img class="logo" src="img/identidade/gsesolucoeslogo-melhorada.png" alt="logo gse Soluções">
                     <h1>GSE Soluções</h1>
                 </a>
             </div>
@@ -32,7 +32,7 @@
     </header>
 
     <section id="banner">
-        <div class="container">
+        <div class="container overlay">
             <h2>Sua Loja de Material de Construção de Confiança</h2>
             <p>Em Materiais Elétricos, Hidráulicos, Ferramentas, Reparos, Limpezas, Acabamento e mais!!</p>
             <a href="produtos.html" class="btn">Confira Nossos Produtos</a>
@@ -72,8 +72,10 @@
             <div class="produtos-grid" id="produto-container">
                 <div class="produto">
                     <img src="img/produtos/caixa-dagua.png" alt="Cimento">
-                    <h4>Caixa D'Agua 500L Fortlev</h4>
-                    <p>R$289,90</p>
+                    <div class="desc">
+                        <h4>Caixa D'Agua 500L Fortlev</h4>
+                        <p>R$289,90</p>
+                    </div>
                 </div>
                 <div class="produto">
                     <img src="img/produtos/bombadagua.png" alt="Tijolos">
@@ -182,46 +184,50 @@
         </div>
     </section>
 
-    <section id="sobre">
+    <section id="sobre-gse">
         <div class="container">
-            <h3>Sobre Nós</h3>
-            <p>Na GSE Soluções, oferecemos uma ampla gama de materiais de construção de alta qualidade. Com anos de
-                experiência no mercado, garantimos o melhor para sua obra.</p><br>
-            <div>
-                <video width="700" controls>
-                    <source src="img/identidade/faixada2.mp4" type="video/mp4">
-                </video>
+            <div class="sobre-gse-content">
+                <div class="sobre-gse-texto">
+                    <h2>Sobre a GSE - Soluções</h2>
+                    <p>
+                        A GSE - Soluções é especializada em oferecer materiais de construção de alta qualidade para projetos de todos os tamanhos. Nossa missão é entregar soluções eficientes para ajudar na realização dos seus projetos, com um atendimento especializado e produtos que você pode confiar.
+                    </p>
+                    <ul class="sobre-gse-lista">
+                        <li><i class="fas fa-hammer"></i> Produtos de Qualidade</li>
+                        <li><i class="fas fa-handshake"></i> Atendimento Diferenciado</li>
+                        <li><i class="fas fa-truck"></i> Entrega Rápida</li>
+                    </ul>
+                    <a href="#contato" class="btn-cta">Saiba Mais</a>
+                </div>
+                <div class="sobre-gse-imagem">
+                    <img src="img/identidade/logoGSE-Solucoes.png" alt="Imagem sobre a GSE">
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contato">
+    <section id="sobre">
         <div class="container">
-            <h3>Contato</h3>
-            <div class="contato">
-                <img src="img/identidade/gsesolucoes.png" alt="Logo GSE Soluções">
-                <ul>
-                    <li><strong>Email: </strong><a href="mailto:lucas9360@gmail.com"
-                            target="_blank">gsesolucoes@mail.com</a></li>
-                    <li><strong>Telefone: </strong><a href="tel:(99)999999999" target="_blank">(61)99872-2375</a></li>
-                    <li><strong>Instagram: </strong><a href="https://www.instagram.com/gsesolucoeslza/"
-                            target="_blank">@gsesolucoeslza</a></li>
-                </ul>
-            </div>
-            <h4 style="text-align: left;">Localização: </h4>
-            <p style="text-align: left;">Avenida Sérgio Buarque de Holanda, Qd. 192, lote 11, loja 03, Parque Estrela
-                Dalva III, Luziânia, Goias, Brazil 72831120</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15322.38293027716!2d-47.91600563684751!3d-16.241210101413852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9359979935708367%3A0x641567211c481642!2sParque%20Estrela%20Dalva%20III%2C%20Luzi%C3%A2nia%20-%20GO!5e0!3m2!1spt-BR!2sbr!4v1730291887302!5m2!1spt-BR!2sbr"
-                width="100%" height="350px" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h3>Sobre a GSE - Soluções</h3>
+            <p>
+                A GSE - Soluções é uma empresa especializada na venda de materiais de construção, oferecendo uma ampla variedade de produtos para atender às necessidades de profissionais da construção civil e clientes que buscam qualidade e eficiência. 
+            </p>
+            <p>
+                Nossa missão é fornecer soluções completas para projetos de construção, desde pequenos reparos até grandes obras, com preços competitivos e atendimento diferenciado. 
+            </p>
         </div>
+    </section>
+
+    
+    <section id="contato">
+        <iframe src="views/contato.html" frameborder="0" scrolling="no"></iframe>
     </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2024 GSE Soluções - Todos os direitos reservados.</p>
         </div>
+        <div class="arrow" id="scrollToTop"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#fff" d="M12.884 5.116a1.253 1.253 0 0 0-1.768 0l-5 5a1.25 1.25 0 0 0 1.768 1.768l2.866-2.866V18a1.25 1.25 0 1 0 2.5 0V9.018l2.866 2.866a1.25 1.25 0 1 0 1.768-1.768z"/></svg></div>
     </footer>
 
     <div class="modal" id="imageModal">

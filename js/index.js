@@ -46,3 +46,31 @@ modal.addEventListener('click', (event) => {
     }
 });
 
+function ajustarAlturaIframe() {
+    const iframe = document.querySelector('#contato iframe');
+    
+    iframe.onload = () => {
+       const conteudoIframe = iframe.contentWindow.document.body.scrollHeight;
+       iframe.style.height = conteudoIframe + 'px';
+    };
+ }
+
+ const arrow = document.getElementById('scrollToTop')
+
+ // Função para mostrar ou esconder a seta
+function toggleArrowVisibility() {
+    if (window.scrollY > 300) { // A partir de 300px de rolagem
+        arrow.classList.add('visible');
+    } else {
+        arrow.classList.remove('visible');
+    }
+}
+
+// Função para rolar a página para o topo
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Adiciona eventos de rolagem e clique
+window.addEventListener('scroll', toggleArrowVisibility);
+arrow.addEventListener('click', scrollToTop);
