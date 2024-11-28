@@ -7,12 +7,12 @@ const slideWidth = document.querySelector('.oferta').offsetWidth;
 
 nextButton.addEventListener('click', () => {
     currentIndex++;
-    if (currentIndex >= track.children.length) currentIndex = 0; // Reinicia ao final
+    if (currentIndex >= track.children.length) currentIndex = 0;
     track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 });
 
 prevButton.addEventListener('click', () => {
     currentIndex--;
-    if (currentIndex < 0) currentIndex = track.children.length - 1; // Volta ao último
+    if (currentIndex < 0) currentIndex = track.children.length - 1;
     track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 });

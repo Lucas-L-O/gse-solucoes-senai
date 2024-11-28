@@ -13,11 +13,11 @@
         <a href="../produtos.html" class="btn button">Ver Mais...</a>
     </div>
 <script>
-    const itemsPerPage = 10; // Número de produtos por página
+    const itemsPerPage = 10;
 let currentPage = 1;
 // Lista dos produtos
 const produtos = [
-    { img: "../img/produtos/caixa-dagua.png", name: "Caixa D'Água", price: 150.00 },
+    { img: "../img/produtos/caixa-dagua.png", name: "Caixa D'Água", price: 150.30 },
     { img: "../img/produtos/bombadagua.png", name: "Bomba D'Água", price: 220.00 },
     { img: "../img/produtos/cano-pvc.png", name: "Cano PVC", price: 12.50 },
     { img: "../img/produtos/boia.png", name: "Boia", price: 35.00 },
@@ -45,22 +45,17 @@ const produtos = [
 ];
 
 function searchProducts() {
-    // Obtenha o valor do campo de busca e normalize para minúsculas
+
     const searchTerm = document.getElementById("search-bar").value.toLowerCase();
-    // Obtenha todos os elementos de produto
     const products = document.getElementsByClassName("produto");
-    
- 
-    // Itere sobre todos os produtos
+
     Array.from(products).forEach((product) => {
-        // Obtenha o nome do produto e normalize para minúsculas
         const productName = removeAccentuation(product.querySelector("h4").textContent.toLowerCase());
-        
-        // Verifique se o nome do produto contém o termo de busca
+
         if (productName.includes(searchTerm)) {
-            product.style.display = "block"; // Mostre o produto se houver uma correspondência
+            product.style.display = "block";
         } else {
-            product.style.display = "none"; // Oculte o produto caso contrário
+            product.style.display = "none";
         }
     });
 }
@@ -69,8 +64,6 @@ function removeAccentuation(text) {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-
-// Função para exibir os produtos
 function displayProducts(page) {
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = page * itemsPerPage;
@@ -91,7 +84,6 @@ function displayProducts(page) {
     });
 }
 
-// Função para gerar os botões de paginação
 function generatePagination() {
     const totalPages = Math.ceil(produtos.length / itemsPerPage);
     const paginationDiv = document.getElementById('pagination');

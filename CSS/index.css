@@ -24,11 +24,6 @@ header {
   color: white;
 }
 
-header h1 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
 
 header div a {
   text-decoration: none;
@@ -696,7 +691,6 @@ header {
 header h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {
