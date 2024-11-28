@@ -24,7 +24,7 @@
                 <ul>
                     <li><a href="#catalogos">Catalogos</a></li>
                     <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#sobre-gse">Sobre Nós</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -66,122 +66,15 @@
     </section>
 
     <section id="produtos">
-        <div class="container-produtos">
+        <iframe src="views/produto.html" scrolling="no"  frameborder="0"></iframe>
+        <!-- <div class="container-produtos">
             <h3>Produtos</h3>
-            <a href="produtos.html" class="btn button">Confira Nossos Produtos</a>
-            <div class="produtos-grid" id="produto-container">
-                <div class="produto">
-                    <img src="img/produtos/caixa-dagua.png" alt="Cimento">
-                    <div class="desc">
-                        <h4>Caixa D'Agua 500L Fortlev</h4>
-                        <p>R$289,90</p>
-                    </div>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/bombadagua.png" alt="Tijolos">
-                    <h4>Bomba Submersa Turbo 380W</h4>
-                    <p>R$399,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/cano-pvc.png" alt="Ferragens">
-                    <h4>Cano PVC</h4>
-                    <p>R$19,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/caixa-ferramentas.png" alt="Ferragens">
-                    <h4>Caixa de Ferramentas</h4>
-                    <p>R$149,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/ducha-higienica.png" alt="Cimento">
-                    <h4>Ducha Higiênica</h4>
-                    <p>R$89,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/espuma.png" alt="Tijolos">
-                    <h4>Multiuso Instantâneo</h4>
-                    <p>R$29,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/interruptor-verde.png" alt="Ferragens">
-                    <h4>Interruptor</h4>
-                    <p>R$24,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/lampada.png" alt="Ferragens">
-                    <h4>Lâmpada</h4>
-                    <p>R$12,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/luminaria.png" alt="Ferragens">
-                    <h4>Luminária</h4>
-                    <p>R$59,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/mangueira.png" alt="Ferragens">
-                    <h4>Mangueira</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/mascara.png" alt="Ferragens">
-                    <h4>Mascara</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/rebitadeira.png" alt="Ferragens">
-                    <h4>Rebitadeira</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/sensor-movimento.png" alt="Ferragens">
-                    <h4>Sensor de Movimento</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/tampa-de-vaso.png" alt="Ferragens">
-                    <h4>Tampa de vaso</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/tinta-spray.png" alt="Ferragens">
-                    <h4>Tinta Spray</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/tinta.jpeg" alt="Ferragens">
-                    <h4>Tinta</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/tinta1.png" alt="Ferragens">
-                    <h4>Tinta Emborrachada Branca</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/tinta2.png" alt="Ferragens">
-                    <h4>Tinta Textura Branca</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/tinta3.png" alt="Ferragens">
-                    <h4>Tinta DIAPISO</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/tinta4.png" alt="Ferragens">
-                    <h4>Tinta Acrilico</h4>
-                    <p>R$49,90</p>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/trena.png" alt="Ferragens">
-                    <h4>Trena Métrica</h4>
-                    <p>R$49,90</p>
-                </div>
-
-
-            </div>
-            <a href="produtos.html" class="btn button">Ver Mais...</a>
-        </div>
+            <a href="../produtos.html" class="btn button">Confira Nossos Produtos</a>
+            <input type="text" id="search-bar" placeholder="Buscar produtos..." onkeyup="searchProducts()">
+            <div class="produtos-grid" id="produtos-grid"></div>
+            <div class="pagination" id="pagination"></div>
+            <a href="../produtos.html" class="btn button">Ver Mais...</a>
+        </div> -->
     </section>
 
     <section id="sobre-gse">
@@ -206,21 +99,9 @@
         </div>
     </section>
 
-    <section id="sobre">
-        <div class="container">
-            <h3>Sobre a GSE - Soluções</h3>
-            <p>
-                A GSE - Soluções é uma empresa especializada na venda de materiais de construção, oferecendo uma ampla variedade de produtos para atender às necessidades de profissionais da construção civil e clientes que buscam qualidade e eficiência. 
-            </p>
-            <p>
-                Nossa missão é fornecer soluções completas para projetos de construção, desde pequenos reparos até grandes obras, com preços competitivos e atendimento diferenciado. 
-            </p>
-        </div>
-    </section>
-
     
     <section id="contato">
-        <iframe src="views/contato.html" frameborder="0" scrolling="no"></iframe>
+        <iframe src="views/contato.html" frameborder="0"></iframe>
     </section>
 
     <footer>
@@ -239,7 +120,8 @@
         </div>
     </div>
 
+
+<script src="js/index.js"></script>
 </body>
 
 </html>
-<script src="js/index.js"></script>

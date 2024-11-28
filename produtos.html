@@ -24,7 +24,7 @@
                 <ul>
                     <li><a href="index.html#catalogos">Catalogos</a></li>
                     <li><a href="#produtos">Produtos</a></li>
-                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#sobre-gse">Sobre Nós</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -34,84 +34,32 @@
     <section id="ofertas">
         <div class="container-ofertas">
             <h3>Ofertas</h3>
-            <div class="ofertas-grid">
-                <div class="oferta">
-                    <img src="img/catalago/finaldesemana2.png" alt="">
-                </div>
-                <div class="oferta">
-                    <img src="img/catalago/finaldesemanagse.png" alt="">
-                </div>
-                <div class="oferta">
-                    <img src="img/catalago/oferta.png" alt="">
-                </div>
-                <div class="oferta">
-                    <img src="img/catalago/finaldesemana2.png" alt="">
-                </div>
-                <div class="oferta">
-                    <img src="img/catalago/finaldesemanagse.png" alt="">
-                </div>
-                <div class="oferta">
-                    <img src="img/catalago/oferta.png" alt="">
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="oferta">
+                        <img src="img/catalago/finaldesemana2.png" alt="">
+                    </div>
+                    <div class="oferta">
+                        <img src="img/catalago/finaldesemanagse.png" alt="">
+                    </div>
+                    <div class="oferta">
+                        <img src="img/catalago/oferta.png" alt="">
+                    </div>
                 </div>
             </div>
+            <button class="carousel-btn prev">←</button>
+            <button class="carousel-btn next">→</button>
         </div>
     </section>
 
     <section id="produtos">
+
         <div class="container">
             <h3>Produtos</h3>
-            <div class="produtos-grid">
-                <div class="produto">
-                    <img src="img/produtos/caixa-dagua.png" alt="Cimento">
-                    <h4>Caixa D'Agua</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/bombadagua.png" alt="Tijolos">
-                    <h4>Bomba D'Agua</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/cano-pvc.png" alt="Ferragens">
-                    <h4>Cano PVC</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/boia.png" alt="Cimento">
-                    <h4>Boia</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/caixa-dagua-tamanhos.png" alt="Tijolos">
-                    <h4>Caixa D'Água vários tamanhos</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/caixa-ferramentas.png" alt="Ferragens">
-                    <h4>Caixa de Ferramentas</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/ducha-higienica.png" alt="Cimento">
-                    <h4>Ducha Higiênica</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/espuma.png" alt="Tijolos">
-                    <h4>Multiuso Instantâneo</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/interruptor-verde.png" alt="Ferragens">
-                    <h4>Interruptor</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/interruptor.png" alt="Ferragens">
-                    <h4>Interruptor</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/lampada.png" alt="Ferragens">
-                    <h4>Lâmpada</h4>
-                </div>
-                <div class="produto">
-                    <img src="img/produtos/luminaria.png" alt="Ferragens">
-                    <h4>Luminaria</h4>
-                </div>
-            </div>
-
+            <div class="produtos-grid" id="produtos-grid"></div>
+            <div class="pagination" id="pagination"></div>
         </div>
+
     </section>
 
     <section id="contato">
@@ -123,7 +71,89 @@
             <p>&copy; 2024 GSE Soluções - Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        // Lista dos produtos
+        const produtos = [
+            { img: "img/produtos/caixa-dagua.png", name: "Caixa D'Água" },
+            { img: "img/produtos/bombadagua.png", name: "Bomba D'Água" },
+            { img: "img/produtos/cano-pvc.png", name: "Cano PVC" },
+            { img: "img/produtos/boia.png", name: "Boia" },
+            { img: "img/produtos/caixa-dagua-tamanhos.png", name: "Caixa D'Água vários tamanhos" },
+            { img: "img/produtos/caixa-ferramentas.png", name: "Caixa de Ferramentas" },
+            { img: "img/produtos/ducha-higienica.png", name: "Ducha Higiênica" },
+            { img: "img/produtos/espuma.png", name: "Espuma" },
+            { img: "img/produtos/interruptor-verde.png", name: "Interruptor Verde" },
+            { img: "img/produtos/interruptor.png", name: "Interruptor" },
+            { img: "img/produtos/lampada.png", name: "Lâmpada" },
+            { img: "img/produtos/luminaria.png", name: "Luminária" },
+            { img: "img/produtos/mangueira.png", name: "Mangueira" },
+            { img: "img/produtos/mascara.png", name: "Máscara" },
+            { img: "img/produtos/rebitadeira.png", name: "Rebitadeira" },
+            { img: "img/produtos/sensor-movimento.png", name: "Sensor de Movimento" },
+            { img: "img/produtos/tampa-de-vaso.png", name: "Tampa de Vaso" },
+            { img: "img/produtos/tinta-spray.png", name: "Tinta Spray" },
+            { img: "img/produtos/tinta.jpeg", name: "Tinta" },
+            { img: "img/produtos/tinta1.png", name: "Tinta Tipo 1" },
+            { img: "img/produtos/tinta2.png", name: "Tinta Tipo 2" },
+            { img: "img/produtos/tinta3.png", name: "Tinta Tipo 3" },
+            { img: "img/produtos/tinta4.png", name: "Tinta Tipo 4" },
+            { img: "img/produtos/trena.png", name: "Trena" },
+            { img: "img/produtos/vedalit.png", name: "Vedalit" }
+        ];
+
+    
+        const itemsPerPage = 10; // Número de produtos por página
+        let currentPage = 1;
+    
+        // Função para exibir os produtos
+        function displayProducts(page) {
+            const startIndex = (page - 1) * itemsPerPage;
+            const endIndex = page * itemsPerPage;
+            const productsToDisplay = produtos.slice(startIndex, endIndex);
+    
+            const produtosGrid = document.getElementById('produtos-grid');
+            produtosGrid.innerHTML = '';
+    
+            productsToDisplay.forEach(produto => {
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('produto');
+                productDiv.innerHTML = `
+                    <img src="${produto.img}" alt="${produto.name}">
+                    <h4>${produto.name}</h4>
+                `;
+                produtosGrid.appendChild(productDiv);
+            });
+        }
+    
+        // Função para gerar os botões de paginação
+        function generatePagination() {
+            const totalPages = Math.ceil(produtos.length / itemsPerPage);
+            const paginationDiv = document.getElementById('pagination');
+            paginationDiv.innerHTML = '';
+    
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                button.onclick = () => {
+                    currentPage = i;
+                    displayProducts(currentPage);
+                };
+                paginationDiv.appendChild(button);
+            }
+        }
+    
+        // Inicializar a página
+        function init() {
+            displayProducts(currentPage);
+            generatePagination();
+        }
+    
+        // Chama a função para inicializar
+        init();
+    </script>
+<!-- <script src="js/index.js"></script> -->
+<script src="js/produto.js"></script>
 </body>
 
 </html>
-<script src="js/index.js"></script>
