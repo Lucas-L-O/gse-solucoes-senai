@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Produtos - GSE Soluções</title>
+    <link rel="stylesheet" href="CSS/admin.css">
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="titulo">
+                <a href="index.html">
+                    <img class="logo" src="img/identidade/gsesolucoeslogo-melhorada.png" alt="logo gse Soluções">
+                    <h1>GSE Soluções</h1>
+                </a>
+            </div>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#catalogos">Catálogos</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#sobre-gse">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Área para exibir o nome do usuário ou botão de login -->
+            <div class="user-info">
+                <span id="username-display"></span>
+                <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button id="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-produtos">
+        <h2>Gerenciamento de Produtos</h2>
+        <button id="add-product-btn" onclick="showAddProductForm()">Adicionar Produto</button>
+
+        <!-- Lista de Produtos -->
+        <div id="product-list">
+            <!-- Os produtos serão exibidos aqui -->
+        </div>
+
+        <!-- Formulário para Adicionar ou Editar Produto -->
+        
+        <!-- Modal para Adicionar/Editar Produto -->
+        <div id="product-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h3 id="form-title">Adicionar Produto</h3>
+                <input type="text" id="product-name" placeholder="Nome do Produto" required>
+                <input type="file" id="product-image" required>
+                <img id="image-preview" src="" alt="Pré-visualização da imagem" style="display: none; max-width: 100px; max-height: 100px;">
+                <input type="number" id="product-price" placeholder="Preço" required>
+                <div class="buttons">
+                    <button class="btnPrimary" id="submit-product-btn" onclick="addProduct()">Salvar</button>
+                    <button class="btnDanger" onclick="cancelEdit()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/admin.js"></script> <!-- Link para o script de produtos -->
+</body>
+</html>

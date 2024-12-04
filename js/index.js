@@ -1,3 +1,48 @@
+const INATIVIDADE_TIMER = 600000;
+
+let inatividadeTimer;
+
+function checkLoginStatus() {
+    const username = localStorage.getItem("username");
+    const password = localStorage.getItem("password");
+
+    const usernameDisplay = document.getElementById("username-display");
+    const loginBtn = document.getElementById("login-btn");
+    const logoutBtn = document.getElementById("logout-btn");
+
+    if (username && password) {
+        usernameDisplay.textContent = `Olá, ${username}!`;
+        loginBtn.style.display = 'none';
+        logoutBtn.style.display = 'inline-block';
+    } else {
+        usernameDisplay.textContent = '';
+        loginBtn.style.display = 'inline-block';
+        logoutBtn.style.display = 'none'
+    }
+}
+
+// Função de logout
+function logout() {
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    checkLoginStatus();
+}
+
+function resetInatividadeTimer() {
+    clearTimeout(inatividadeTimer);
+    console.log("Usuário deslogado por inatividade")
+    inatividadeTimer = setTimeout(logout, INATIVIDADE_TIMER);
+}
+
+document.addEventListener("mousemove", resetInatividadeTimer);
+document.addEventListener("keypress", resetInatividadeTimer);
+
+document.addEventListener("DOMContentLoaded", function() {
+    checkLoginStatus();
+    resetInatividadeTimer();
+});
+
+
 // DUPLICA O CONTEUDO DO CARROSEL
 const catalogosGrid = document.querySelector('.catalogos-grid');
 const catalogos = document.querySelectorAll('.catalogo');

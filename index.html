@@ -11,19 +11,26 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container">            
+            <div class="user-info">
+                <span id="username-display"></span>
+                <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button id="logout-btn" onclick="logout()">Logout</button>
+            </div>
             <div class="titulo">
                 <a href="index.html">
                     <img class="logo" src="img/identidade/gsesolucoeslogo-melhorada.png" alt="logo gse Soluções">
                     <h1>GSE Soluções</h1>
                 </a>
             </div>
+
             <nav class="menu-principal">
                 <ul>
                     <li><a href="#catalogos">Catalogos</a></li>
                     <li><a href="produtos.html">Produtos</a></li>
                     <li><a href="#sobre-gse">Sobre Nós</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li><a href="admin.html">Admin</a></li>
                 </ul>
             </nav>
         </div>
