@@ -21,6 +21,7 @@ function checkLoginStatus() {
         usernameDisplay.textContent = '';
         loginBtn.style.display = 'inline-block';
         logoutBtn.style.display = 'none';
+        window.location = 'login.html';
     }
 }
 
