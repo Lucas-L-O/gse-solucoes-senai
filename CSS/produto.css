@@ -1,46 +1,46 @@
 
 #produtos {
-    padding: 40px 0; /* Espaçamento acima e abaixo da seção */
-    background-color: #f9f9f9; /* Cor de fundo suave para a seção */
+    padding: 40px 0;
+    background-color: #f9f9f9;
 }
 
 #produtos h3 {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 30px; /* Espaço abaixo do título */
-    font-size: 24px; /* Tamanho da fonte do título */
-    color: #003399; /* Cor do título */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #003399;
 }
 
 .produtos-grid {
-    display: grid; /* Usa grid para organizar os produtos */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta automaticamente o número de colunas */
-    gap: 20px; /* Espaço entre os itens da grade */
-    padding: 0 20px; /* Espaçamento lateral */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
 }
 
 .produto {
-    background-color: #fff; /* Cor de fundo dos produtos */
-    border: 1px solid #ddd; /* Borda leve */
-    border-radius: 8px; /* Cantos arredondados */
-    overflow: hidden; /* Impede que elementos internos saiam do contêiner */
-    text-align: center; /* Centraliza o texto dentro do produto */
-    transition: transform 0.3s; /* Efeito de transição ao passar o mouse */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
 .produto:hover {
-    transform: scale(1.05); /* Aumenta um pouco o produto ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .produto img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-bottom: 1px solid #ddd; /* Borda abaixo da imagem */
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
 }
 
 .produto h4 {
-    padding: 15px; /* Espaçamento interno para o título */
-    font-size: 18px; /* Tamanho da fonte do título do produto */
-    color: #003399; /* Cor do texto */
+    padding: 15px;
+    font-size: 18px;
+    color: #003399;
 }
 
 .contato {
@@ -57,21 +57,21 @@
 
 .contato ul {
     align-items: left;
-    padding: 0;                 /* Remove o preenchimento padrão */
-    margin: 0;                  /* Remove a margem padrão */
+    padding: 0;
+    margin: 0;
 }
 
 .contato li {
-    margin: 5px 0;              /* Espaço entre os itens da lista */
+    margin: 5px 0;
 }
 
 .contato a {
-    text-decoration: none;       /* Remove o sublinhado dos links */
-    color: #007BFF;             /* Cor dos links, ajuste conforme necessário */
+    text-decoration: none;
+    color: #007BFF;
 }
 
 .contato a:hover {
-    text-decoration: underline;  /* Adiciona sublinhado ao passar o mouse */
+    text-decoration: underline;
 }
 
 footer {
@@ -127,7 +127,6 @@ section {
 .oferta {
     flex: 0 0 33.66%; 
     padding: 5px;
-    /* transition: transform 0.5s ease; */
 }
 
 .oferta img {
@@ -151,7 +150,7 @@ section {
     }
 }
 
-/* Ao passar o mouse sobre a área, a rotação para */
+
 .ofertas-grid:hover {
     animation-play-state: paused;
 }
@@ -177,7 +176,7 @@ section {
 }
 
 .oferta {
-    min-width: 50%; /* Ajuste para o número de itens visíveis */
+    min-width: 50%;
     box-sizing: border-box;
     z-index: 1;
 }
