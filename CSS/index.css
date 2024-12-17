@@ -80,14 +80,10 @@ h3 {
 }
 
 #banner {
-  /* background-color: #007bff; */
-  background-image: url('file:///C:/Users/ALUNO/Documents/Lucas%20Lopes/loja-materiais/img/identidade/faixadagpt.png');
+  background-image: url('../img/identidade/faixadagpt.png');
   background-size: cover;
-  /* Cobre todo o container */
   background-position: center;
-  /* Centraliza a imagem */
   background-repeat: no-repeat;
-  /* Evita repetição */
   color: white;
   padding: 80px 0;
   text-align: center;
