@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <div class="container-produtos">
+        <h3>Produtos</h3>
+        <a href="../produtos.html" class="btn button">Confira Nossos Produtos</a>
+        <input type="text" id="search-bar" placeholder="Buscar produtos..." onkeyup="searchProducts()">
+        <div class="produtos-grid" id="produtos-grid"></div>
+        <div class="pagination" id="pagination"></div>
+        <a href="../produtos.html" class="btn button">Ver Mais...</a>
+    </div>
+<script>
+const itemsPerPage = 10;
+let currentPage = 1;
+// Lista dos produtos
+
+function fetchProducts() {
+    return fetch('/api/products')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na API: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('Erro ao buscar produtos:', error);
+            return [];
+        });
+}
+
+function searchProducts() {
+    const searchTerm = document.getElementById("search-bar").value.toLowerCase();
+    const products = document.getElementsByClassName("produto");
+
+    Array.from(products).forEach((product) => {
+        const productName = removeAccentuation(product.querySelector("h4").textContent.toLowerCase());
+
+        if (productName.includes(searchTerm)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+function removeAccentuation(text) {
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function displayProducts(page) {
+    fetchProducts().then(produtos => {
+        const itemsPerPage = 10;
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = page * itemsPerPage;
+        const productsToDisplay = produtos.slice(startIndex, endIndex);
+
+        const produtosGrid = document.getElementById('produtos-grid');
+        produtosGrid.innerHTML = '';
+
+        productsToDisplay.forEach(produto => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('produto');
+            productDiv.innerHTML = `
+                <img src="../img/produtos/${produto.image}" alt="${produto.name}">
+                <h4>${produto.name}</h4>
+                <p>R$ ${produto.price}</p>
+            `;
+            produtosGrid.appendChild(productDiv);
+        });
+    });
+}
+
+function generatePagination() {
+    fetchProducts().then(produtos => {
+        const itemsPerPage = 10;
+        const totalPages = Math.ceil(produtos.length / itemsPerPage);
+        const paginationDiv = document.getElementById('pagination');
+        paginationDiv.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement('button');
+            button.classList.add('button')
+            button.textContent = i;
+            button.onclick = () => {
+                currentPage = i;
+                displayProducts(currentPage);
+            };
+            paginationDiv.appendChild(button);
+        }
+    });
+}
+
+// Inicializar a página
+function init() {
+    displayProducts(currentPage);
+    generatePagination();
+}
+
+// Chama a função para inicializar
+init();
+</script>
+</body>
+</html>

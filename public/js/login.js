@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
 
-            console.log('Usuário logado com sucesso');
+            // console.log('Usuário logado com sucesso');
 
             window.location.href = 'index.html';
         } else {

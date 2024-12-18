@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Boia",
+    "image": "boia.png",
+    "price": "29.99",
+    "id": "1734530593261"
+  },
+  {
+    "name": "Bomba D'Água",
+    "image": "bombadagua.png",
+    "price": "109.90",
+    "id": "1734530593252"
+  },
+  {
+    "name": "Caixa D'Água",
+    "image": "caixa-dagua.png",
+    "price": "149.99",
+    "id": "1734530593264"
+  },
+  {
+    "name": "Cano PVC",
+    "image": "cano-pvc.png",
+    "price": "59.99",
+    "id": "1734530593265"
+  },
+  {
+    "name": "Caixa D'Água vários tamanhos",
+    "image": "caixa-dagua-tamanhos.png",
+    "price": "250.00",
+    "id": "1734530593266"
+  },
+  {
+    "name": "Caixa de Ferramentas",
+    "image": "caixa-ferramentas.png",
+    "price": "199.99",
+    "id": "1734530593267"
+  },
+  {
+    "name": "Ducha Higiênica",
+    "image": "ducha-higienica.png",
+    "price": "39.99",
+    "id": "1734530593268"
+  },
+  {
+    "name": "Espuma Multuso",
+    "image": "espuma.png",
+    "price": "25.99",
+    "id": "1734530593269"
+  },
+  {
+    "name": "Interruptor Industrial",
+    "image": "interruptor.png",
+    "price": "49.99",
+    "id": "1734530593270"
+  },
+  {
+    "name": "Interruptor Industrial (Verde)",
+    "image": "interruptor-verde.png",
+    "price": "49.99",
+    "id": "1734530593271"
+  },
+  {
+    "name": "Lâmpada Amarela",
+    "image": "lampada.png",
+    "price": "19.99",
+    "id": "1734530593272"
+  },
+  {
+    "name": "Luminária de Teto",
+    "image": "luminaria.png",
+    "price": "99.99",
+    "id": "1734530593273"
+  },
+  {
+    "name": "Mangueira",
+    "image": "mangueira.png",
+    "price": "58.99",
+    "id": "1734530593274"
+  },
+  {
+    "name": "Mascará",
+    "image": "mascara.png",
+    "price": "59.99",
+    "id": "1734530593275"
+  },
+  {
+    "name": "Rebitadeira",
+    "image": "rebitadeira.png",
+    "price": "39.99",
+    "id": "1734530593276"
+  },
+  {
+    "name": "Sensor de Movimento",
+    "image": "sensor-movimento.png",
+    "price": "78.80",
+    "id": "1734530593277"
+  },
+  {
+    "name": "Vedalit",
+    "image": "vedalit.png",
+    "price": "35.99",
+    "id": "1734530593279"
+  },
+  {
+    "name": "Tampa para Vaso Sanitário",
+    "image": "tampa-de-vaso.png",
+    "price": "49.99",
+    "id": "1734530747284"
+  }
+]

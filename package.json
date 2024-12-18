@@ -1,0 +1,15 @@
+{
+  "name": "loja-materiais",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

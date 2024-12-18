@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GSE SOLUÇÕES - Produtos</title>
+    <link rel="stylesheet" href="CSS/produto.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="shortcut icon" href="img/identidade/gsesolucoeslogo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">            
+            <div class="user-info">
+                <span id="username-display"></span>
+                <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button id="logout-btn" onclick="logout()">Logout</button>
+            </div>
+            <div class="titulo">
+                <a href="index.html">
+                    <img class="logo" src="img/identidade/gsesolucoeslogo-melhorada.png" alt="logo gse Soluções">
+                    <h1>GSE Soluções</h1>
+                </a>
+            </div>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#catalogos">Catalogos</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#sobre-gse">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="ofertas">
+        <div class="container-ofertas">
+            <h3>Ofertas</h3>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="oferta">
+                        <img src="img/catalago/finaldesemana2.png" alt="">
+                    </div>
+                    <div class="oferta">
+                        <img src="img/catalago/finaldesemanagse.png" alt="">
+                    </div>
+                    <div class="oferta">
+                        <img src="img/catalago/oferta.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev">←</button>
+            <button class="carousel-btn next">→</button>
+        </div>
+    </section>
+
+    <section id="produtos">
+        <iframe src="views/produto.html" scrolling="no"  frameborder="0"></iframe>
+    </section>
+
+    <section id="contato">
+        <iframe src="views/contato.html" frameborder="0" scrolling="no"></iframe>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GSE Soluções - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+<script src="js/produto.js"></script>
+</body>
+
+</html>

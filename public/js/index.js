@@ -30,7 +30,7 @@ function logout() {
 
 function resetInatividadeTimer() {
     clearTimeout(inatividadeTimer);
-    console.log("Usuário deslogado por inatividade")
+    // console.log("Usuário deslogado por inatividade")
     inatividadeTimer = setTimeout(logout, INATIVIDADE_TIMER);
 }
 
